@@ -48,11 +48,10 @@ class HomeController extends Controller
             $month_date = date('m');
             $month = PurchaseDetails::whereMonth('date_of_purchase', $month_date)->sum('total');
             $previous_month = PurchaseDetails::whereMonth('date_of_purchase', date('m', strtotime('-1 month')))->sum('total');
-            session()->flash('alert-warning',  'Feedback recieved. We love hearing from our students!!');
             return view('home', compact('products', 'departments', 'suppliers', 'purchaseDetails', 'distributionDetails', 'today', 'previous_month',  'month', 'total'))->with('i')->with('j');
         } 
         elseif (Auth::User()->role == 0) {
-            return View('home0');
+            return View('home0')->with('alert-danger', 'Access Denied!!');
         }
         elseif (Auth::User()->role == 1) {
             $distributionDetails = Distribution::where('department_id', Auth::User()->department_id)->get();    

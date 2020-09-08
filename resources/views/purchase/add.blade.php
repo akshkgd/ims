@@ -14,7 +14,7 @@
         <div class="form-group">
             <label class="required">Select Product</label>
             <select class="form-control" name="product_id" required="required">
-                <option value="" selected="selected" disabled="disabled">Select your area of specialization</option>
+                <option value="" selected="selected" disabled="disabled">Select Product</option>
                 @foreach ($products as $product)
                 <option value="{{$product->id}}">{{$product->name}}</option>
                 @endforeach

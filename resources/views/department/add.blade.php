@@ -21,10 +21,10 @@
             <input type="text" name="product_id" class="form-control" placeholder="Select Product">
         </div> -->
                     <div class="form-group">
-                        <label for="username" class="required">Supplier Name</label>
-                        <input type="text" name="name" class="form-control" placeholder="Enter Supplier Name">
+                        <label for="username" class="required">Department Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter Department Name">
                     </div>
-                    <input class="btn btn-primary btn-block" type="submit" value="Add Supplier Details">
+                    <input class="btn btn-primary btn-block" type="submit" value="Add Department Details">
 
                 </form>
             </div>

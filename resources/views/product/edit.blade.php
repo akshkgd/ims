@@ -37,7 +37,7 @@
                         <label  >Reorder Threshold</label>
                         <input type="text" name="reorderThreshold" class="form-control" value="{{$product->reorderThreshold}}">
                     </div>
-                    <input class="btn btn-primary btn-block" type="submit" value="Add Product Details">
+                    <input class="btn btn-primary btn-block" type="submit" value="Update Product Details">
 
                 </form>
             </div>
