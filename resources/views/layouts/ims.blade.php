@@ -15,19 +15,6 @@
     <!-- iOS Safari mobile address bar theming -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
 
-    <!-- SEO -->
-    <meta name="description" content="Front-end framework with a built-in dark mode, designed for rapidly building beautiful dashboards and product pages.">
-    <meta name="author" content="Halfmoon">
-    <meta name="keywords" content="Halfmoon, HTML, CSS, JavaScript, CSS Framework, dark mode, dark-mode, darkmode, dark theme, dark-theme, darktheme, Bootstrap, Foundation, Bulma, dashboard, UI, UI framework, user interface, design, design system">
-
-    <!-- Open graph -->
-    <meta property="fb:app_id" content="2560228000973437">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.gethalfmoon.com/docs/introduction">
-    <meta property="og:title" content="Introduction - Halfmoon">
-    <meta property="og:description" content="Front-end framework with a built-in dark mode, designed for rapidly building beautiful dashboards and product pages.">
-    <meta property="og:image" content="https://res.cloudinary.com/halfmoon-ui/image/upload/v1593528979/halfmoon-og-image_zl1bob.png">
-
     <!-- Fav and Title -->
     <link rel="icon" href="/static/halfmoon/img/halfmoon-icon.png">
     <title>Inventory Management System - UOA</title>
