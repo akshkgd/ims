@@ -18,16 +18,18 @@ class CreatePurchaseDetailsTable extends Migration
             $table->integer('product_id')->unsigned();
             $table->date('date_of_purchase');
             $table->integer('supplier_id')->unsigned();
-            $table->string('invoice_number', 20);
-            $table->string('purchase_order_number', 20)->unique();
+            $table->date('date_of_delivery')->nullable();
+            $table->string('invoice_number')->nullable();
+            $table->string('purchase_order_number')->unique();
+            $table->string('head')->nullable();
             $table->integer('quantity_purchased')->unsigned();
-            $table->float('rate_per_unit')->unsigned();
-            $table->double('total')->unsigned();
+            $table->float('rate_per_unit')->unsigned()->nullable();
+            $table->double('total')->unsigned()->nullable();
             $table->char('process_adopted');
-            $table->integer('purpose_of_purchase')->unsigned();
+            $table->char('purpose_of_purchase');
             $table->integer('department_id')->nullable();
             $table->timestamps();
-        });
+        }); 
     }
 
     /**

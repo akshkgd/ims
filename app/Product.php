@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\PurchaseDetails;
 class Product extends Model
 {
+    
     // protected $fillable = [
     //     'name', 'description', 'category', 'reorderThreshold', 
     //        ];

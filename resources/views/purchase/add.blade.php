@@ -27,7 +27,8 @@
         </div> -->
         <div class="form-group">
             <label for="username" class="required">Date of Purchase</label>
-            <input type="text" name="date_of_purchase" class="form-control" placeholder="Select Product">
+            <p>Date Format: yyyy-mm-dd</p>
+            <input type="text" name="date_of_purchase" class="form-control" placeholder="Date of Purchase">
         </div>
 
         <div class="form-group">
@@ -40,7 +41,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="username" class="required">Invoice Number</label>
+            <label for="username" class="">Date of Delivery</label>
+            <p>Date Format: yyyy-mm-dd</p>
+            <input type="text" name="date_of_delivery" class="form-control" placeholder="Date of Delivery">
+        </div>
+        <div class="form-group">
+            <label for="username" class="">Invoice Number</label>
             <input type="text" name="invoice_number" class="form-control" placeholder="Invoice Number">
         </div>
 
@@ -60,7 +66,7 @@
         </div>
 
         <div class="form-group">
-            <label  class="required">Rate per unit</label>
+            <label  class="">Rate per unit</label>
             <input type="text" name="rate_per_unit" class="form-control" placeholder="Rate per unit">
         </div>
 
@@ -69,21 +75,25 @@
             <label class="required">Process Adopted for Purchase</label>
             <select class="form-control" name="process_adopted" required="required">
                 <option value="" selected="selected" disabled="disabled">Select Process Adopted for Purchase</option>
-                <option value="E-gen">E-gen</option>
+                <option value="E-gem">E-gem</option>
                 <option value="Bidding">Bidding</option>
                 <option value="Local">Local</option>
             </select>
+        </div>
+        <div class="form-group">
+            <label  class="required">Head</label>
+            <input type="text" name="head" class="form-control" placeholder="Head">
         </div>
         <div class="form-group" >
             <label for="username" class="required">Purpose of Purchase</label>
             <select class="form-control" name="purpose_of_purchase" required="required" onchange="showDiv('hidden_div', this)">
                 <option value="" selected="selected" disabled="disabled">Select Purpose Of Purchase</option>
-                <option value="0">Central Store</option>
-                <option value="1">Purchase on Request</option>
+                <option value="Central Store">Central Store</option>
+                <option value="Purchase on Request">Purchase on Request</option>
                 
             </select>
         </div>
-
+        
         <div class="form-group" id="hidden_div">
             <label >Select Departemnt Which Requested</label>
             <select class="form-control" name = "department_id">
@@ -92,7 +102,13 @@
                 <option value="{{$department->id}}">{{$department->name}}</option>
                 @endforeach
             </select>
+            <div class=" pt-2 mt-2">
+            <label  class="required mt-1">Intender Name </label>
+            <input type="text" name="intender" class="form-control" placeholder="Intender Name">
+        </div>  
+
         </div>
+        
 
         <div>
         </div>
@@ -103,7 +119,7 @@
 <script>
     function showDiv(divId, element)
 {
-    document.getElementById(divId).style.display = element.value == 1 ? 'block' : 'none';
+    document.getElementById(divId).style.display = element.value == 'Purchase on Request' ? 'block' : 'none';
 }
 </script>
 @endsection

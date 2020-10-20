@@ -24,14 +24,16 @@
                         <label  class="required">Product Name</label>
                         <input type="text" name="name" class="form-control" placeholder="Enter Product Name">
                     </div>
-                    <div class="form-group">
-                        <label  class="required">Product Description</label>
-                        <input type="text" name="description" class="form-control" placeholder="Enter Product Description   ">
-                    </div>
-                    <div class="form-group">
-                        <label  class="required">Product Category</label>
-                        <input type="text" name="category" class="form-control" placeholder="Enter Product category">
-                    </div>
+                    
+                    <div class="form-group" >
+            <label for="username" class="required">Product Category</label>
+            <select class="form-control" name="category" required="required" onchange="showDiv('hidden_div', this)">
+                <option value="" selected="selected" disabled="disabled">Select Product Category</option>
+                <option value="Consumerable">Consumerable</option>
+                <option value="Non Consumerable">Non Consumerable</option>
+                
+            </select>
+        </div>
                     <div class="form-group">
                         <label  >Reorder Threshold</label>
                         <input type="text" name="reorderThreshold" class="form-control" placeholder="Enter Reorder Threshold">

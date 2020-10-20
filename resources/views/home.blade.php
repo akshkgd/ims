@@ -13,7 +13,7 @@
     <!-- font-size-22 = font-size: 2.2rem (22px) -->
     Dashboard
   </h1>
-  @if($purchaseDetails->count() != 0)
+  @if($month != 0 && $previous_month !=0)
   <div class="card justify-content-between d-flex bg-1">
     <div>
       <span>Purchase Today</span>
@@ -73,7 +73,7 @@
   <div class="col-6 col-xl-3">
     <div class="card">
       <h2 class="card-title">Users</h2>
-      <h4>{{$products->count()}}</h3>
+      <h4>{{$users->count()}}</h3>
 
         <a href="{{url('/user')}}" class="btn btn-outline-primary d-block"> </i>Details</a>
     </div>
@@ -88,7 +88,7 @@
 </div>
 <div class="content">
 
-<h4>Purchase Details</h4>
+<h4>Recent Purchase Details</h4>
     <div class="row">
         <div class="col-lg-12">
             <div class="">
@@ -99,11 +99,13 @@
                             <th>Date</th>
                             <th>Product</th>
                             <th>Purchase Order Number</th>
+                            <th>Date of Delivery</th>
                             <th>Invoice Number</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Total</th>
                             <th>Process Adopted</th>
+                            <th>Head</th>
                             <th>Purpose of Purchase</th>
                             <th>Supplier</th>
 
@@ -112,16 +114,18 @@
                         @foreach($purchaseDetails as $purchase)
                         <tr>
                             <th>{{ ++$i }}</th>
-                            <td>{{$purchase->date_of_purchase}}</td>
-                            <td> <a href="{{ route('product_detail', $purchase->product_id) }}">{{$purchase->item->name}}</a></td>
+                            <td>{{$purchase->date_of_purchase->format('d M Y')}}</td>
+                            <td> <a href="{{ route('product_detail',  Crypt::encrypt($purchase->product_id)) }}">{{$purchase->item->name}}</a></td>
                             <td>{{$purchase->purchase_order_number}}</td>
+                            <td>{{$purchase->date_of_delivery->format('d M y')}}</td>
                             <td>{{$purchase->invoice_number}}</td>
                             <td>{{$purchase->quantity_purchased}}</td>
                             <td>{{$purchase->rate_per_unit}}</td>
                             <td>{{$purchase->total}}</td>
                             <td>{{$purchase->process_adopted}}</td>
+                            <td>{{$purchase->head}}</td>
                             <td>{{$purchase->purpose_of_purchase}}</td>
-                            <td><a href="{{ route('supplierwpd', $purchase->supplier_id) }}">{{$purchase->supplier->name}}</a>  </td>
+                            <td><a href="{{ route('supplierwpd',  Crypt::encrypt($purchase->supplier_id)) }}">{{$purchase->supplier->name}}</a>  </td>
                         </tr>
                         @endforeach
                     
@@ -140,7 +144,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="">
-                <h4> Distribution Details</h4>
+                <h4>Recent Distribution Details</h4>
                 <table class="table  table-bordered">
                     
                         <tr>
@@ -152,6 +156,7 @@
                             <th>Distribution Details</th>
                             <th>Quantity</th>
                             <th>department</th>
+                            <th>Intender</th>
                             
                             
 
@@ -161,13 +166,14 @@
                         <tr>
                             <th>{{ ++$j }}</th>
                             <td>{{$distribution->item->name}}</td>
-                            <td>{{$distribution->date_of_issue}}</td>
+                            <td>{{$distribution->date_of_issue->format('d M Y')}}</td>
                             
                             <td>{{$distribution->purchase_order_number}}</td>
                             <td>{{$distribution->pon->purpose_of_purchase}}</td>
                             
                             <td>{{$distribution->quantity}}</td>
                             <td>{{$distribution->department->name}}</td>
+                            <td>{{$distribution->intender}}</td>
                             
                             
                         </tr>

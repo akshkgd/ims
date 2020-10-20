@@ -189,6 +189,9 @@
                 <a href="{{url('/product/create/')}}" class="sidebar-link" id="sidebar-content-and-cards" data-active-scroll-disabled="disabled">
                     <span class="name">Add New Product</span>
                 </a>
+                <a href="{{url('/products/archive/')}}" class="sidebar-link" id="sidebar-content-and-cards" data-active-scroll-disabled="disabled">
+                    <span class="name">Archived Product</span>
+                </a>
 
                 <br />
                 <!-- Building blocks section start -->

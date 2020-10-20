@@ -40,11 +40,13 @@
                             <th>#</th>
                             <th>Date</th>
                             <th>Purchase Order Number</th>
+                            <th>Date of Delivery</th>
                             <th>Invoice Number</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Total</th>
                             <th>Process Adopted</th>
+                            <th>Head</th>
                             <th>Purpose of Purchase</th>
                             <th>Supplier</th>
 
@@ -53,13 +55,15 @@
                         @foreach($purchaseDetails as $purchase)
                         <tr>
                             <th>{{ ++$i }}</th>
-                            <td>{{$purchase->date_of_purchase}}</td>
+                            <td>{{$purchase->date_of_purchase->format('d M Y')}}</td>
                             <td> {{$purchase->purchase_order_number}}</td>
+                            <td>{{$purchase->date_of_delivery->format('d M Y')}}</td>
                             <td>{{$purchase->invoice_number}}</td>
                             <td>{{$purchase->quantity_purchased}}</td>
                             <td>{{$purchase->rate_per_unit}}</td>
                             <td>{{$purchase->total}}</td>
                             <td>{{$purchase->process_adopted}}</td>
+                            <td>{{$purchase->head}}</td>
                             <td>{{$purchase->purpose_of_purchase}}</td>
                             <td>  {{$purchase->supplier->name}} </td>
                         </tr>

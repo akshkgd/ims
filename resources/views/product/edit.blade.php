@@ -25,14 +25,16 @@
                         <label  class="required">Product Name</label>
                         <input type="text" name="name" class="form-control"  value="{{$product->name}}">
                     </div>
-                    <div class="form-group">
-                        <label  class="required">Product Description</label>
-                        <input type="text" name="description" class="form-control" value="{{$product->description}}">
-                    </div>
-                    <div class="form-group">
-                        <label  class="required">Product Category</label>
-                        <input type="text" name="category" class="form-control" value="{{$product->category}}">
-                    </div>
+                    
+                    <div class="form-group" >
+            <label for="category" class="required">Product Category</label>
+            <select class="form-control" name="category" required="required"  value="{{$product->category}}">
+                <option value="{{$product->category}}" selected="selected">{{$product->category}}</option>
+                <option value="Consumerable">Consumerable</option>
+                <option value="Non Consumerable">Non Consumerable</option>
+                
+            </select>
+        </div>
                     <div class="form-group">
                         <label  >Reorder Threshold</label>
                         <input type="text" name="reorderThreshold" class="form-control" value="{{$product->reorderThreshold}}">

@@ -29,6 +29,7 @@
         </div> -->
         <div class="form-group">
             <label for="username" class="required">Date of Purchase</label>
+            <p>Date Format: yyyy-mm-dd</p>
             <input type="text" name="date_of_purchase" class="form-control" value="{{$purchase->date_of_purchase}}">
         </div>
 
@@ -42,7 +43,12 @@
             </select>
         </div>
         <div class="form-group">
-            <label for="username" class="required">Invoice Number</label>
+            <label for="username" class="">Date of Delivery</label>
+            <p>Date Format: yyyy-mm-dd</p>
+            <input type="text" name="date_of_delivery" class="form-control" value="{{$purchase->date_of_delivery}}">
+        </div>
+        <div class="form-group">
+            <label for="username" class="">Invoice Number</label>
             <input type="text" name="invoice_number" class="form-control" value="{{$purchase->invoice_number}}">
         </div>
 
@@ -62,7 +68,7 @@
         </div>
 
         <div class="form-group">
-            <label  class="required">Rate per unit</label>
+            <label  class="">Rate per unit</label>
             <input type="text" name="rate_per_unit" class="form-control" value="{{$purchase->rate_per_unit}}">
         </div>
 
@@ -71,17 +77,22 @@
             <label class="required">Process Adopted for Purchase</label>
             <select class="form-control" name="process_adopted" required="required" value="{{$purchase->process_adopted}}">
                 <option value="{{$purchase->process_adopted}}" selected="selected" >{{$purchase->process_adopted}}</option>
-                <option value="E-gen">E-gen</option>
+                <option value="E-gem">E-gem</option>
                 <option value="Bidding">Bidding</option>
                 <option value="Local">Local</option>
             </select>
         </div>
+        <div class="form-group">
+            <label  class="required">Head</label>
+            <input type="text" name="head" class="form-control" value="{{$purchase->head}}">
+        </div>
+
         <div class="form-group" >
             <label for="username" class="required">Purpose of Purchase</label>
             <select class="form-control" name="purpose_of_purchase" required="required" onchange="showDiv('hidden_div', this)" value="{{$purchase->purpose_of_purchase}}">
                 <option value="{{$purchase->purpose_of_purchase}}" selected="selected">{{$purchase->purpose_of_purchase}}</option>
-                <option value="0">Central Store</option>
-                <option value="1">Purchase on Request</option>
+                <option value="Central Store">Central Store</option>
+                <option value="Purchase on Request">Purchase on Request</option>
                 
             </select>
         </div>
@@ -94,8 +105,11 @@
                 <option value="{{$department->id}}">{{$department->name}}</option>
                 @endforeach
             </select>
+            <div class=" pt-2 mt-2">
+            <label  class="required mt-1">Intender Name </label>
+            <input type="text" name="intender" class="form-control" value="{{$purchase->intender}}">
         </div>
-
+        </div>
         <div>
         </div>
         <input type="hidden" name="old_pon" value="{{$purchase->purchase_order_number}}">

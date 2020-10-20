@@ -17,9 +17,11 @@
         .card {
             border-radius: 10px;
         }
-.card-link{
-    color:#202021;
-}
+
+        .card-link {
+            color: #202021;
+        }
+
         @media(max-width : 786px) {
             .ims-title {
                 font-size: 2rem;
@@ -32,7 +34,10 @@
 
         @media(min-width : 787px) {
             .ims-card {
-                margin-top: 4rem;
+                margin-top: 0rem;
+            }
+            .w-80{
+                width: 80% !important;
             }
         }
 
@@ -47,8 +52,8 @@
             color: #1A73e8;
             border: 1px solid lightgray;
             border-radius: 25px;
-            padding-top:3px;
-            padding-bottom:3px;
+            padding-top: 3px;
+            padding-bottom: 3px;
         }
 
         .chip {
@@ -68,146 +73,173 @@
             width: 40px;
             border-radius: 50%;
         }
+
+        .avatar {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
         .list-group-item {
             border: none;
             border-radius: 0px;
         }
+
         .list-group-item.active {
             border-radius: 0;
+        }
+
+        .person {
+            background-color: #e4f5f4;
         }
     </style>
 </head>
 
 <body onabort="alert('Do you Want to Leave??')">
-    <div id="app">
+    <div id="app ">
 
 
         <main class="py-4">
-            <div class="container">
-                <div class="row pt-5 ">
+            <div class="container-fluid pt-5">
+                <div class="row  ">
                     <div class="col-md-6 mb-3">
-                        <div class="ims-intro ims-card">
+                        <div class="ims-intro ims-card text-center  ">
                             <img src="{{asset('img/logo.png')}}" alt="" height="100px">
-                            <h1 class="pt-1 ims-title">Inventory Management System</h1>
-                            <h3 ">इलाहाबाद विश्वविद्यालय</h4>
-                            <h3>University of Allahabad, Prayagraj</h4>
-                            <div class=" pt-2">
-                                <a href="http://allduniv.ac.in/" class="btn btn-outline-dark">University Website</a>
+                            <h2 class="pt-1 ims-title">Inventory Management System</h1>
+                                <h5>इलाहाबाद विश्वविद्यालय</h4>
+                                    <h5>University of Allahabad, Prayagraj</h4>
+                                        <!-- <div class=" pt-2">
+                                    <a href="http://allduniv.ac.in/" class="btn btn-outline-dark">University Website</a>
+
+                        </div> -->
+                                        <div class="row justify-content-center">
+                                            <div class="col-sm-6">
+                                                <div class="text-center pt-5">
+                                                    <img src="/img/vc.webp" alt="" class="avatar">
+                                                    <p class=" pt-1 mb-0">Developed under the supervision of</p>
+                                                    <h4>Prof. R.R. Tiwari, VC, UoA</h4>
+                                                </div>
+                                                <div class="text-center pt-1">
+                                                    <p class=" pt-1 mb-0">Resource Person</p>
+                                                    <h5>Ms. Shreya Agrawal, IPS, UoA</h4>
+                                                </div>
+                                            </div>
+
+                                        </div>
 
                         </div>
+
                     </div>
-
-                </div>
-                <div class=" col-md-6  text-center ">
-                    @guest
-                    <div class=" card card-body shadow">
-                        <div class="text-center">
-                            <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
-                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod qui, itaque nam delectus nihil quam laborum.</p> -->
-                        </div>
-                        <form method="POST" action="{{ route('login') }}" class="pt-3">
-                            @csrf
-
-                            <div class="form-group row">
-
-                                <label for="email" class="col-md-12 text-left col-form-label ">{{ __('E-Mail Address') }}</label>
-
-                                <div class="col-md-12">
-                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                    @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
+                    <div class=" col-md-6  text-center ">
+                        @guest
+                        <div class=" card card-body shadow w-8" >
+                            <div class="text-center">
+                                <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
+                                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod qui, itaque nam delectus nihil quam laborum.</p> -->
                             </div>
+                            <form method="POST" action="{{ route('login') }}" class="pt-3">
+                                @csrf
 
-                            <div class="form-group row">
-                                <label for="password" class="col-md-12 text-left col-form-label ">{{ __('Password') }}</label>
+                                <div class="form-group row">
 
-                                <div class="col-md-12">
-                                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                    <label for="email" class="col-md-12 text-left col-form-label ">{{ __('E-Mail Address') }}</label>
 
-                                    @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
+                                    <div class="col-md-12">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
-                            <div class="form-group row">
-                                <div class="col-md-12 text-left ">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                        <label class="form-check-label" for="remember">
-                                            {{ __('Remember Me') }}
-                                        </label>
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-0">
-                                <div class="col-md-12 ">
-                                    <button type="submit btn " class="btn   btn-block btn-outline-primary">
-                                        Login to Dashboard
-                                    </button>
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-12 text-left col-form-label ">{{ __('Password') }}</label>
 
+                                    <div class="col-md-12">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
-                    </div>
-                    @endguest
-                    @auth
-                    <div class="card pt-3 shadow ims-card">
-                        <div class="text-center">
-                            <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
-                        </div>
-                        <div class="list-group mt-5">
-  <a href="{{url('/home')}}" class="list-group-item list-group-item-action active">
-    Go to Dashboard
-  </a>
-  
-  <a class="list-group-item list-group-item-action" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-  
-</div>   
 
-                        <div class="card-body">
-                            
-                            <!-- <a href="{{url('/home')}}" class="card-link">Dashboard</a> -->
-                            
+                                <div class="form-group row">
+                                    <div class="col-md-12 text-left ">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                            <label class="form-check-label" for="remember">
+                                                {{ __('Remember Me') }}
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mb-0">
+                                    <div class="col-md-12 ">
+                                        <button type="submit btn " class="btn   btn-block btn-outline-primary">
+                                            Login to Dashboard
+                                        </button>
+
+
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                        @endguest
+                        @auth
+                        <div class="card pt-3 shadow ims-card">
+                            <div class="text-center">
+                                <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
+                            </div>
+                            <div class="list-group mt-5">
+                                <a href="{{url('/home')}}" class="list-group-item list-group-item-action active">
+                                    Go to Dashboard
+                                </a>
+
+                                <a class="list-group-item list-group-item-action" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+
+                            </div>
+
+                            <div class="card-body">
+
+                                <!-- <a href="{{url('/home')}}" class="card-link">Dashboard</a> -->
+
+                            </div>
+                        </div>
+                        @endauth
+                        <div class="text-center w-8 ">
+                            <div class="chip mt-4">
+                                <img src="{{asset('/img/ashish.png')}}" alt="Person">
+                                <a href="https://codekaro.in"  rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
+
+                            </div>
+                            <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
+
+                        </dv>
+
                     </div>
-                    @endauth
-                    <dv class="text-center">
-                    <div class="chip mt-4">
-                        <img src="{{asset('/img/ashish.png')}}" alt="Person">
-                        <a href="" class="card-link">Ashish Shukla (Developer)</a>
-                        
-                    </div>  
-                    <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
- 
-                    </dv>
-                    
                 </div>
             </div>
-    </div>
-    </main>
+        </main>
     </div>
     <footer class="footer ">
         <div class="container">
             <div class=" text-cente">
 
-                
+
 
             </div>
 

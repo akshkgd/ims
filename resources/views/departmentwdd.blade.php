@@ -27,6 +27,7 @@
                             <th>Purchase Order Number</th>
                             <th>Distribution Details</th>
                             <th>Quantity</th>
+                            <th>Intender</th>
                             
                             
                             
@@ -43,6 +44,7 @@
                             <td>{{$distribution->pon->purpose_of_purchase}}</td>
                             
                             <td>{{$distribution->quantity}}</td>
+                            <td>{{$distribution->intender}}</td>
                             
                             
                         </tr>

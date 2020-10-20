@@ -7,6 +7,7 @@ use App\Distribution;
 use App\PurchaseDetails;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Validator;
 
 class DistributionController extends Controller
 {
@@ -40,18 +41,25 @@ class DistributionController extends Controller
      */
     public function store(Request $request)
     {
+        if(PurchaseDetails::where('purchase_order_number', $request->purchase_order_number)->count()>0){
         $a = new Distribution();
 
         $a->purchase_order_number = $request->purchase_order_number;
         $purchase = PurchaseDetails::where('purchase_order_number', $request->purchase_order_number)->first();
         $b = $purchase->product_id;
         $a->product_id = $b;
+        $a->intender = $request->intender;
         $a->department_id = $request->department_id;
         $a->date_of_issue = $request->date_of_issue;
         $a->quantity = $request->quantity;
         $a->save();
         session()->flash('alert-success',  'Details Added!!');
         return redirect('/distribution');
+        }
+        else{
+            session()->flash('alert-danger',  'Purchase order number not found!!');
+            return redirect('/distribution/create/'); 
+        }
     }
 
     /**
@@ -105,7 +113,7 @@ class DistributionController extends Controller
         } else {
             $a->department_id = $request->department_id;
         }
-
+        $a->intender = $request->intender;
         $a->date_of_issue = $request->date_of_issue;
         $a->quantity = $request->quantity;
         $a->save();

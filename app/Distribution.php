@@ -8,6 +8,7 @@ use App\Department;
 
 class Distribution extends Model
 {
+    protected $dates = ['date_of_delivery', 'date_of_order', 'date_of_issue'];
     protected $fillable = [
         'date_of_issue', 'department_id', 'purchase_order_number','quantity',  'product_id',
        ];

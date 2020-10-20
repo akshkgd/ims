@@ -25,7 +25,6 @@
             <tr>
                 <th>No</th>
                 <th>Name</th>
-                <th>Details</th>
                 <th>Category</th>
                 <th>Reorder threshold</th>
                 <th width="280px">Action</th>
@@ -35,27 +34,26 @@
                 <td>{{ ++$i }}</td>
                 <td>
 
-                    
+
                     <div class="dropdown">
                         <button class="btn" data-toggle="dropdown" type="button" id="dropdown-toggle-btn-1" aria-haspopup="true" aria-expanded="false">
                             {{$product->name}} <i class="fa fa-angle-down ml-5" aria-hidden="true"></i> <!-- ml-5 = margin-left: 0.5rem (5px) -->
-</button>
+                        </button>
                         <div class="dropdown-menu" aria-labelledby="dropdown-toggle-btn-1">
-                           
-                        <a class="dropdown-item" href="{{ route('product_detail', Crypt::encrypt( $product->id) )}}">Purchase Details</a>
-                        <a class="dropdown-item" href="{{ route('productwdd',Crypt::encrypt( $product->id)) }}">Distribution Details</a>   
+
+                            <a class="dropdown-item" href="{{ route('product_detail', Crypt::encrypt( $product->id) )}}">Purchase Details</a>
+                            <a class="dropdown-item" href="{{ route('productwdd',Crypt::encrypt( $product->id)) }}">Distribution Details</a>
                             <div class="dropdown-divider"></div>
-                            
+
                         </div>
-                    </div </td> <td>{{ $product->description }}
-                </td>
+                    </div </td> 
                 <td>{{ $product->category }}</td>
                 <td>{{ $product->reorderThreshold }}</td>
                 <td>
                     <form action="" method="POST">
 
                         <a class="btn btn-info" href="{{route('product.edit', Crypt::encrypt($product->id))}}">Edit</a>
-                        <a class="btn btn-info" href="">Delete</a>
+                        <a class="btn btn-info" href="{{ route('del-product', Crypt::encrypt($product->id)) }}">Delete</a>
 
 
                     </form>
@@ -63,7 +61,7 @@
             </tr>
             @endforeach
         </table>
-       
+
 
     </div>
     @endsection

@@ -16,8 +16,7 @@ class CreateProductsTable extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-            $table->integer('category')->unsigned();
+            $table->string('category');
             $table->integer('reorderThreshold')->unsigned()->nullable();
             $table->boolean('status')->default(1);
             $table->timestamps();

@@ -43,6 +43,10 @@ Route::get('/productwdd/{id}', 'SummaryController@productwdd')->name('productwdd
 Route::get('/departmentwdd/{id}', 'SummaryController@departmentwdd')->name('departmentwdd');
 Route::get('/ponwd{id}', 'SummaryController@ponwd')->name('ponwd');
 
+Route::get('/products/archive', 'ProductController@archive' )->name('archive-product');
+Route::get('/restore-product/{id}', 'ProductController@restore' )->name('restore-product');
+Route::get('/delete-product/{id}', 'ProductController@delete' )->name('delete-product');
+
 });
 
 

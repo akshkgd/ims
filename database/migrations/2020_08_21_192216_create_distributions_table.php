@@ -15,7 +15,8 @@ class CreateDistributionsTable extends Migration
     {
         Schema::create('distributions', function (Blueprint $table) {
             $table->id();
-            $table->string('purchase_order_number', 20);
+            $table->string('purchase_order_number', 30);
+            $table->string('intender')->nullable();
             $table->integer('product_id')->unsigned();
             $table->date('date_of_issue');
             $table->integer('department_id')->unsigned();    

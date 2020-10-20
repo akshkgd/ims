@@ -11,6 +11,7 @@ use App\Supplier;
 use  App\Http\Controllers\test;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Validator;
 
 class PurchaseDetailsController extends Controller
 {
@@ -54,8 +55,10 @@ class PurchaseDetailsController extends Controller
         $a->rate_per_unit = $request->rate_per_unit;
         $a->total = $request->rate_per_unit * $request->quantity_purchased;
         $a->process_adopted = $request->process_adopted;
+        $a->date_of_delivery = $request->date_of_delivery;
         $a->purpose_of_purchase = $request->purpose_of_purchase;
         $a->department_id = $request->department_id;
+        $a->head = $request->head;
         $a->save();
         if ($request->department_id != "") {
             $this->distribution($request);
@@ -72,6 +75,7 @@ class PurchaseDetailsController extends Controller
         $a->department_id = $request->department_id;
         $a->date_of_issue = date('Y-m-d');
         $a->quantity = $request->quantity_purchased;
+        $a->intender =$request->intender;
         $a->save();
 
 
@@ -106,12 +110,14 @@ class PurchaseDetailsController extends Controller
         $a->supplier_id = $request->supplier_id;
         $a->invoice_number = $request->invoice_number;
         // $a->purchase_order_number = $request->purchase_order_number;//major update....
+        $a->date_of_delivery = $request->date_of_delivery;
         $a->quantity_purchased = $request->quantity_purchased;
         $a->rate_per_unit = $request->rate_per_unit;
         $a->total = $request->rate_per_unit * $request->quantity_purchased;
         $a->process_adopted = $request->process_adopted;
         $a->purpose_of_purchase = $request->purpose_of_purchase;
         $a->department_id = $request->department_id;
+        $a->head = $request->head;
         if ($request->old_pon == $request->purchase_order_number) {
             $a->purchase_order_number = $request->purchase_order_number;
         } else {

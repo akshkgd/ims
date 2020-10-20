@@ -9,7 +9,7 @@
 <div class="content ">
     <div class="row row-eq-spacing-lg">
         <div class="col-md-7">
-        <h4>Add Product Details</h2>
+        <h4>Add Distribution Details</h2>
             <div class="card ">
                 <form action="{{ route('distribution.store') }}" class="" method="POST">
                     @csrf
@@ -22,11 +22,13 @@
         </div> -->
                     <div class="form-group">
                         <label  class="required">Purchase Order Number</label>
-                        <input type="text" name="purchase_order_number" class="form-control" placeholder="Enter Product Name">
+                        <input type="text" name="purchase_order_number" class="form-control" placeholder="Enter Purchase order number">
                     </div>
                     <div class="form-group">
                         <label  class="required">Date of Issue</label>
-                        <input type="text" name="date_of_issue" class="form-control" placeholder="Enter Product Description   ">
+                        <p>date format: yyyy-mm-dd</p>
+                        <input type="text" name="date_of_issue" class="form-control" placeholder="yyyy-mm-dd   ">
+                        
                     </div>
                     <div class="form-group">
                         <label  class="required">Department</label>
@@ -39,10 +41,15 @@
                     </div>
                     <div class="form-group">
                         <label  >Quantity</label>
-                        <input type="text" name="quantity" class="form-control" placeholder="Enter Reorder Threshold">
+                        <input type="text" name="quantity" class="form-control" placeholder="Enter Quantity">
+                    </div>
+
+                    <div class="form-group">
+                        <label  >Intender Name</label>
+                        <input type="text" name="intender" class="form-control" placeholder="Enter Intender Name">
                     </div>
                    
-                    <input class="btn btn-primary btn-block" type="submit" value="Add Product Details">
+                    <input class="btn btn-primary btn-block" type="submit" value="Add Distribution Details">
 
                 </form>
             </div>

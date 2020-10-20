@@ -35,7 +35,7 @@
                         <tr>
                             <th>{{ ++$i }}</th>
                             <td><a href="{{ route('product_detail', Crypt::encrypt($distribution->product_id)) }}">{{$distribution->item->name}}</a></td>
-                            <td>{{$distribution->date_of_issue}}</td>
+                            <td>{{$distribution->date_of_issue->format('d M Y')}}</td>
                             
                             <td><a href="{{ route('ponwd', Crypt::encrypt($distribution->purchase_order_number)) }}">{{$distribution->purchase_order_number}}</a></td>
                             

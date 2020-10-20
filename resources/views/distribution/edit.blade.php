@@ -27,6 +27,7 @@
                     </div>
                     <div class="form-group">
                         <label  class="required">Date of Issue</label>
+                        <p>date format: yyyy-mm-dd</p>
                         <input type="text" name="date_of_issue" class="form-control" value="{{$distribution->date_of_issue}}">
                     </div>
                     <div class="form-group">
@@ -42,10 +43,14 @@
                         <label  >Quantity</label>
                         <input type="text" name="quantity" class="form-control" value="{{$distribution->quantity}}">
                     </div>
+                    <div class="form-group">
+                        <label  >Intender Name</label>
+                        <input type="text" name="intender" class="form-control" value="{{$distribution->intender}}">
+                    </div>
                     <input type="hidden" name="product_id" value="{{$distribution->product_id}}">
                     <input type="hidden" name="old_pon" value="{{$distribution->purchase_order_number}}">
                     <input type="hidden" name="old_did" value="{{$distribution->department_id}}">
-                    <input class="btn btn-primary btn-block" type="submit" value="Add Product Details">
+                    <input class="btn btn-primary btn-block" type="submit" value="Update Distribution Details">
                     
 
                 </form>

@@ -27,6 +27,7 @@
                             <th>Purchase Order Number</th>
                             <th>Quantity</th>
                             <th>department</th>
+                            <th>Intender</th>
                             
                             
 
@@ -42,7 +43,7 @@
                             
                             <td>{{$distribution->quantity}}</td>
                             <td>{{$distribution->department->name}}</td>
-                            
+                            <td>{{$distribution->intender}}</td>
                             
                         </tr>
                         @endforeach

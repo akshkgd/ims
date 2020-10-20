@@ -44,6 +44,7 @@
                             <th>Purchase Order Number</th>
                             <th>Quantity</th>
                             <th>department</th>
+                            <th>Intender</th>
                             
                             
 
@@ -52,7 +53,7 @@
                         @foreach($distributionDetails as $distribution)
                         <tr>
                             <th>{{ ++$i }}</th>
-                            <td>{{$distribution->date_of_issue}}</td>
+                            <td>{{$distribution->date_of_issue->format('d M Y')}}</td>
                             
                             <td>{{$distribution->purchase_order_number}} {{$distribution->pon->purpose_of_purchase}} </td>
                             
@@ -60,6 +61,7 @@
                             <td>
                             <a class="card-link" href="{{ route('departmentwdd', Crypt::encrypt($distribution->department_id)) }}">{{$distribution->department->name}}</a>
                             </td>
+                            <td>{{$distribution->intender}}</td>
                             
                             
                         </tr>
