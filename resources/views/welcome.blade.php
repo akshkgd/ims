@@ -9,12 +9,16 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Inventory Management System - UOA</title>
-
-
+    <link href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css" rel="stylesheet">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         .card {
+            border-radius: 10px;
+        }
+
+        .modal-content {
+            border:none;
             border-radius: 10px;
         }
 
@@ -36,7 +40,8 @@
             .ims-card {
                 margin-top: 0rem;
             }
-            .w-80{
+
+            .w-80 {
                 width: 80% !important;
             }
         }
@@ -75,8 +80,8 @@
         }
 
         .avatar {
-            height: 50px;
-            width: 50px;
+            height: 60px;
+            width: 60px;
             border-radius: 50%;
         }
 
@@ -132,7 +137,7 @@
                     </div>
                     <div class=" col-md-6  text-center ">
                         @guest
-                        <div class=" card card-body shadow w-8" >
+                        <div class=" card card-body shadow w-8">
                             <div class="text-center">
                                 <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
                                 <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod qui, itaque nam delectus nihil quam laborum.</p> -->
@@ -223,16 +228,16 @@
                         <div class="text-center w-8 ">
                             <div class="chip mt-4">
                                 <img src="{{asset('/img/ashish.png')}}" alt="Person">
-                                <a href="https://codekaro.in"  rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
-
+                                <a type="button" class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
+                                <!-- <button type="button" class="card-link" data-toggle="modal" data-target="#exampleModalCenter">Ashish Shukla</button> -->
                             </div>
                             <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
 
-                        </dv>
+                            </dv>
 
+                        </div>
                     </div>
                 </div>
-            </div>
         </main>
     </div>
     <footer class="footer ">
@@ -245,6 +250,44 @@
 
         </div>
     </footer>
+
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Developer Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <img src="/img/ashish.png" alt="" class="avatar">
+                        <h4>Ashish Shukla</h4>
+                        <h6><a href="https://codekaro.in">Codekaro.in</a></h6>
+                        <div>
+
+<p>After discovering my passion for web development, I made websites for friends and students, interned with local business, and hired myself out as a freelancer. I’m looking forward to bringing that passion to a full-time role.</p>             
+</div>
+                        
+                        <div class="row">
+                         <hr>   
+                        <div class="col text-center">
+                        <h5><a href="tel:8542929271" class="card-link">Call Me</a></h5>
+                        </div>
+                        <div class="col text-center">
+                        <h5><a href="mailto:akshkgd@gmail.com" class="card-link">Mail Me</a></h5>
+                        </div>
+                        
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
