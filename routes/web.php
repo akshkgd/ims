@@ -33,7 +33,7 @@ Route::resource('user', 'UserController');
 
 Route::get('/delete-department/{id}', 'DepartmentController@del' )->name('del-department');
 Route::get('/delete-supplier/{id}', 'SupplierController@del' )->name('del-supplier');
-Route::get('/delete-product/{id}', 'ProductController@del' )->name('del-product');
+Route::get('/del-product/{id}', 'ProductController@del' )->name('del-product');
 
 Route::get('/productwpd/{id}', 'SummaryController@productwpd' )->name('product_detail');
 Route::get('/supplierwpd/{id}', 'SummaryController@supplierwpd' )->name('supplierwpd');
