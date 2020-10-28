@@ -53,7 +53,7 @@
                     <form action="" method="POST">
 
                         <a class="btn btn-info" href="{{route('product.edit', Crypt::encrypt($product->id))}}">Edit</a>
-                        <a class="btn btn-info" href="{{ route('del-product', Crypt::encrypt($product->id)) }}">Delete</a>
+                        <a class="btn btn-info" href="{{ route('delete-product', Crypt::encrypt($product->id)) }}">Delete</a>
 
 
                     </form>
