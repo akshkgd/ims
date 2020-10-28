@@ -70,7 +70,15 @@
             border-radius: 25px;
             background-color: #f1f1f1;
         }
-
+        input[type=button], input[type=submit], input[type=reset] {
+            display: inline-block;
+            padding: 0 25px;
+            height: 40px;
+            font-size: 16px;
+            line-height: 40px;
+            border-radius: 25px;
+            background-color: #f1f1f1; 
+        }
         .chip img {
             float: left;
             margin: 0 10px 0 -25px;
@@ -229,7 +237,7 @@
                             <div class="chip mt-4">
                                 <img src="{{asset('/img/ashish.png')}}" alt="Person">
                                 <a type="button" class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
-                                <!-- <button type="button" class="card-link" data-toggle="modal" data-target="#exampleModalCenter">Ashish Shukla</button> -->
+                                
                             </div>
                             <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
 
