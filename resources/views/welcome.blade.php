@@ -236,7 +236,7 @@
                         <div class="text-center w-8 ">
                             <div class="chip mt-4">
                                 <img src="{{asset('/img/ashish.png')}}" alt="Person">
-                                <a type="button" class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
+                                <a  class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
                                 
                             </div>
                             <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
