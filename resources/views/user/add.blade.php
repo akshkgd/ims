@@ -22,16 +22,16 @@
         </div> -->
                         <div class="form-group">
                             <label for="username" class="required"> Name</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter Supplier Name">
+                            <input type="text" name="name" class="form-control" placeholder="Enter User Name">
                         </div>
                         <div class="form-group">
                             <label for="username" class="required"> Email</label>
-                            <input type="text" name="email" class="form-control" placeholder="Enter Supplier Name">
+                            <input type="text" name="email" class="form-control" placeholder="Enter User Email">
                         </div>
 
                         <div class="form-group">
                             <label for="username" class="required"> Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Enter Supplier Name">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
                         </div>
 
                         <div class="form-group" >
@@ -43,7 +43,7 @@
                                 @endforeach
                             </select>
                         </div>
-                        <input class="btn btn-primary btn-block" type="submit" value="Add Supplier Details">
+                        <input class="btn btn-primary btn-block" type="submit" value="Add User Details">
 
                     </form>
                 </div>

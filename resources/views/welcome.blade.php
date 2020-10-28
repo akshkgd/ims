@@ -130,7 +130,7 @@
                                                 <div class="text-center pt-5">
                                                     <img src="/img/vc.webp" alt="" class="avatar">
                                                     <p class=" pt-1 mb-0">Developed under the supervision of</p>
-                                                    <h4>Prof. R.R. Tiwari, VC, UoA</h4>
+                                                    <h4>Prof. R.R. Tewari, VC, UoA</h4>
                                                 </div>
                                                 <div class="text-center pt-1">
                                                     <p class=" pt-1 mb-0">Resource Person</p>
