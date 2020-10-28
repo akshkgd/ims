@@ -114,12 +114,14 @@ class ProductController extends Controller
             $a->status = 0;
             $a->save();
             session()->flash('alert-warning',  'Product Archived');
+            return redirect('/product/archive');
         }
         else{
             Product::destroy($product);
             session()->flash('alert-warning',  'Product Removed');
+            return redirect('/product');
         }
-        return redirect('/product');
+        
 
     }
 
