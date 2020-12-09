@@ -128,13 +128,14 @@
                                         <div class="row justify-content-center">
                                             <div class="col-sm-6">
                                                 <div class="text-center pt-5">
-                                                    <img src="/img/vc.webp" alt="" class="avatar">
-                                                    <p class=" pt-1 mb-0">Developed under the supervision of</p>
-                                                    <h4>Prof. R.R. Tewari, VC, UoA</h4>
+                                                    <img src="/img/vc.png" alt="" class="avatar">
+                                                    <h5>Prof. Sangita Srivastava, VC, UoA</h4>
                                                 </div>
                                                 <div class="text-center pt-1">
-                                                    <p class=" pt-1 mb-0">Resource Person</p>
-                                                    <h5>Ms. Shreya Agrawal, IPS, UoA</h4>
+                                                <img src="/img/img.jpeg" alt="" class="avatar">
+                                                <p class=" pt-1 mb-0">Developed under the supervision of</p>
+                                                    <p class=" pt-1 mb-0"></p>
+                                                    <h5>Ms. Shreya Agrawal,Resource Person, CCE, IPS, UoA</h4>
                                                 </div>
                                             </div>
 
@@ -236,7 +237,7 @@
                         <div class="text-center w-8 ">
                             <div class="chip mt-4">
                                 <img src="{{asset('/img/ashish.png')}}" alt="Person">
-                                <a  class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class="card-link">Ashish Shukla (Developer)</a>
+                                <a  class="card-link" data-toggle="modal" data-target="#exampleModalCenter" rel=”dofollow” class=" chip"> Ashish Shukla (Developer)</a>
                                 
                             </div>
                             <h6 class="text-muted pt-2"> &COPY; 2020 University of Allahabad, All Rights Reserved.</h6>
