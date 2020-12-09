@@ -129,11 +129,12 @@
                                             <div class="col-sm-6">
                                                 <div class="text-center pt-5">
                                                     <img src="/img/vc.png" alt="" class="avatar">
+                                                    <p class=" pt-1 mb-0">Developed under the supervision of</p>
                                                     <h5>Prof. Sangita Srivastava, VC, UoA</h4>
                                                 </div>
                                                 <div class="text-center pt-1">
                                                 <img src="/img/img.jpeg" alt="" class="avatar">
-                                                <p class=" pt-1 mb-0">Developed under the supervision of</p>
+                                                
                                                     <p class=" pt-1 mb-0"></p>
                                                     <h5>Ms. Shreya Agrawal,Resource Person, CCE, IPS, UoA</h4>
                                                 </div>
