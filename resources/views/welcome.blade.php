@@ -125,18 +125,19 @@
                                     <a href="http://allduniv.ac.in/" class="btn btn-outline-dark">University Website</a>
 
                         </div> -->
-                                        <div class="row justify-content-center">
-                                            <div class="col-sm-6">
-                                                <div class="text-center pt-5">
-                                                    <img src="/img/vc.png" alt="" class="avatar">
-                                                    <p class=" pt-1 mb-0">Developed under the supervision of</p>
+                                        <div class="row justify-content-center pt-5">
+                                            <div class="col-sm-8" >
+                                                <div class="text-center  ">
+                                                <h4 class=" pt-1 mb-0 text-muted">Developed under the supervision of</h3>  
+                                                    <img src="/img/vc.png" alt="" class="avatar pt-2">
+                                                    
                                                     <h5>Prof. Sangita Srivastava, VC, UoA</h4>
                                                 </div>
                                                 <div class="text-center pt-1">
                                                 <img src="/img/img.jpeg" alt="" class="avatar">
                                                 
                                                     <p class=" pt-1 mb-0"></p>
-                                                    <h5>Ms. Shreya Agrawal,Resource Person, CCE, IPS, UoA</h4>
+                                                    <h5>Ms. Shreya Agrawal,Resource Person, <br> CCE, IPS, UoA</h4>
                                                 </div>
                                             </div>
 
@@ -147,7 +148,7 @@
                     </div>
                     <div class=" col-md-6  text-center ">
                         @guest
-                        <div class=" card card-body shadow w-8">
+                        <div class=" card card-body w-8">
                             <div class="text-center">
                                 <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
                                 <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quod qui, itaque nam delectus nihil quam laborum.</p> -->
@@ -209,7 +210,7 @@
                         </div>
                         @endguest
                         @auth
-                        <div class="card pt-3 shadow ims-card">
+                        <div class="card pt-3  ims-card">
                             <div class="text-center">
                                 <img src="{{'/img/ims.png'}}" alt="" class="img-fluid">
                             </div>
